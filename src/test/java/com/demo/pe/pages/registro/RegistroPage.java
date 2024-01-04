@@ -24,4 +24,9 @@ public class RegistroPage extends PageObject {
     @FindBy(id = "confirmPassword")
     protected WebElementFacade inp_confirmpass;
 
+    @FindBy(xpath = "//button[@class=\"btn btn-default\"]")
+    protected WebElementFacade btn_confirm;
+
 }
+
+
