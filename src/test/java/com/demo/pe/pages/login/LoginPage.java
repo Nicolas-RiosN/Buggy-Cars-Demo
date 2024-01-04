@@ -15,4 +15,7 @@ public class LoginPage extends PageObject {
     @FindBy(xpath = "//button[@class=\"btn btn-success\"]")
     protected WebElementFacade btn_login;
 
+    @FindBy(xpath = "//span[@class=\"nav-link disabled\"]")
+    protected WebElementFacade span_user;
+
 }

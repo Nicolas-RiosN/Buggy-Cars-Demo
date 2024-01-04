@@ -20,6 +20,15 @@ public class ValidationStep extends ValidationPage {
         return lbl_error.isDisplayed();
     }
 
-    @Step
+
+    @Step("Validar usuario ingreso")
+    public Boolean UserConnect(){
+        return span_user.isDisplayed();
+    }
+
+    @Step("Validar de ingreso con credenciales invalidas")
+    public Boolean ErrorMessageLogin(){
+        return lbl_loginerror.isDisplayed();
+    }
 
 }

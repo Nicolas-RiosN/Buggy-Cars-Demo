@@ -15,13 +15,13 @@ public class ValidationPage extends PageObject {
     @FindBy(xpath = "//div[@class=\"result alert alert-danger\"]")
     protected WebElementFacade lbl_error;
 
-    @FindBy(xpath = "//span[@class=\"nav-link disabled\"]")
+    @FindBy(xpath = "//span[@class='nav-link disabled'][contains(.,'Hi, Nicolas')]")
     protected WebElementFacade span_user;
 
     @FindBy(xpath = "//a[@class=\"nav-link\" and text()='Logout']")
     protected WebElementFacade btn_logout;
 
-    @FindBy(xpath = "//a[@class=\"nav-link\" and text()='Profile']")
+    @FindBy(xpath = "/html/body/my-app/header/nav/div/my-login/div/ul/li[2]/a")
     protected WebElementFacade btn_profile;
 
     @FindBy(xpath = "//span[@class=\"label label-warning\"]")

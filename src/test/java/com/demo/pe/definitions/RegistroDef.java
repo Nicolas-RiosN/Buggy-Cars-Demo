@@ -23,11 +23,12 @@ public class RegistroDef {
     @Given("el usuario navega al sitio web")
     public void userNavigateTo(){
         url.navigateTo("https://buggy.justtestit.org");
-        registro.clickRegister();
+
     }
 
     @When("ingresa credenciales validas")
     public void userRegisterWithValidCredentials(){
+        registro.clickRegister();
         registro.typeUser("Nicolas");
         registro.typeName("Nicolas");
         registro.typeLastName("Rios");
@@ -43,6 +44,7 @@ public class RegistroDef {
 
     @When("ingresa credenciales ya existentes")
     public void userRegisterWithInUseCredentials(){
+        registro.clickRegister();
         registro.typeUser("Nicolas");
         registro.typeName("Nicolas");
         registro.typeLastName("Rios");
@@ -58,6 +60,7 @@ public class RegistroDef {
 
     @When("ingresa credenciales no validas")
     public void userRegisterWithInvalidCredentials(){
+        registro.clickRegister();
         registro.typeUser("a");
         registro.typeName("a");
         registro.typeLastName("a");
