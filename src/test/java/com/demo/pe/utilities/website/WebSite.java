@@ -1,2 +1,18 @@
-package com.demo.pe.utilities.website;public class WebSite {
+package com.demo.pe.utilities.website;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
+
+public class WebSite {
+
+    @Steps(shared = true)
+    PageObject demo;
+
+    @Step("Navegar al sitio web")
+    public void navigateTo(String url){
+        demo.setDefaultBaseUrl(url);
+        demo.open();
+    }
+
 }
